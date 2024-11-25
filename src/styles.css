@@ -7,7 +7,7 @@ body {
     overflow: hidden;
 }
 
-h1, h2 {
+h1 {
     text-align: center;
 }
 
@@ -20,11 +20,12 @@ h1, h2 {
 .slide {
     text-align: center;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     height: 100vh;
     flex-direction: column;
     position: relative;
+    padding-top: 60px;
 }
 
 .navigation {
@@ -39,4 +40,65 @@ h1, h2 {
     text-decoration: none;
     font-size: 1.5em;
     color: #000;
+}
+
+.heading-bar {
+    width: 100%;
+    background-color: #00A36C;
+    padding: 30px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
+    color: #fff;
+}
+
+.heading-bar h1 {
+    font-size: 1.5em;
+    margin: 0;
+    color: black;
+}
+
+.content {
+    padding: 20px;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+.content h2 {
+    font-size: 2em;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.content ul {
+    padding-left: 20px;
+}
+
+.content li {
+    margin-bottom: 10px;
+}
+
+.content ul.comment {
+    list-style-type: none;
+    margin-left: 20px;
+}
+
+.content ul.comment li {
+    margin-bottom: 10px;
+}
+
+pre {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    overflow: auto;
+}
+
+code {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1em;
 }
