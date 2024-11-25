@@ -18,28 +18,31 @@ h1 {
 }
 
 .slide {
-    text-align: center;
     display: flex;
-    justify-content: flex-start;
+    flex-direction: column;
+    justify-content: space-between; /* Ensure space between top and bottom */
     align-items: center;
     height: 100vh;
-    flex-direction: column;
+    padding: 60px 20px 20px 20px; /* Adjust padding to ensure consistent spacing */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
     position: relative;
-    padding-top: 60px;
 }
 
 .navigation {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
     display: flex;
     gap: 15px;
+    align-self: flex-end; /* Align navigation to the bottom right */
+    margin-top: auto; /* Push navigation to the bottom */
 }
 
 .navigation a {
     text-decoration: none;
     font-size: 1.5em;
     color: #000;
+    background-color: #fff; /* Add background color for better visibility */
+    padding: 10px; /* Add padding for better click area */
+    border-radius: 5px; /* Add border radius for better aesthetics */
+    border: 1px solid #000; /* Add border for better visibility */
 }
 
 .heading-bar {
