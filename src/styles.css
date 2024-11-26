@@ -105,3 +105,17 @@ code {
     font-family: 'Courier New', Courier, monospace;
     font-size: 1em;
 }
+
+/* Style for the main list items */
+.slide .content ul > li {
+    font-size: 1.2em; /* Adjust the font size as needed */
+    font-weight: bold; /* Optional: make the text bold */
+}
+
+/* Style for the nested comment list items */
+.slide .content ul.comment li {
+    font-size: 1em; /* Adjust the font size as needed */
+    font-weight: normal; /* Ensure the text is not bold */
+    margin-left: 20px; /* Optional: add indentation */
+    color: #555; /* Optional: change the text color */
+}
