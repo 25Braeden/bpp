@@ -28,3 +28,14 @@ function go(direction) {
     // Navigate to the new file
     window.location.href = newFile;
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const nameInput = document.getElementById('nameInput');
+    const updateButton = document.getElementById('updateButton');
+    const userNameSpan = document.getElementById('userName');
+
+    updateButton.addEventListener('click', () => {
+        const name = nameInput.value.trim() || "friend";
+        userNameSpan.textContent = name;
+    });
+});
