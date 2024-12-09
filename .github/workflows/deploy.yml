@@ -1,0 +1,31 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js (if you're using it)
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Build (if necessary)
+        run: |
+          # Add any build steps here if you need to, like compiling or bundling.
+          # Otherwise, you can skip this step if it's just static files.
+          echo "Nothing to build"
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages  # The branch to deploy to.
+          folder: unit-0/public  # The folder to deploy from.
