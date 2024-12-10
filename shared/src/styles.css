@@ -54,6 +54,7 @@ h1 {
     left: 0;
     text-align: center;
     color: #fff;
+    z-index: 1000; /* Ensure the header bar is on top */
 }
 
 .heading-bar h1 {
@@ -63,12 +64,13 @@ h1 {
 }
 
 .content {
-    padding: 20px;
+    padding: 80px 20px 20px 20px; /* Add padding to the top to ensure content starts below the header bar */
     text-align: left;
     width: 100%;
     box-sizing: border-box;
-    margin-top: 20px;
     font-size: 1.2em;
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: calc(100vh - 80px); /* Adjust the height to account for the header bar */
 }
 
 .content h2 {
@@ -141,4 +143,45 @@ button {
 
 button:hover {
     background-color: #45a049;
+}
+
+input.correct {
+    border: 2px solid green;
+}
+
+input.incorrect {
+    border: 2px solid red;
+}
+
+#feedback.correct {
+    color: green;
+}
+
+#feedback.incorrect {
+    color: red;
+}
+
+.quiz-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adjust the gap as needed */
+}
+
+#feedback {
+    display: block; /* Ensures it always follows block layout */
+    margin-top: 10px; /* Adds spacing between the button and feedback */
+    padding: 0; /* Removes padding to eliminate box effect */
+    border: none; /* Removes any border */
+    background: none; /* Removes background color */
+    font-size: 1em; /* Adjust the font size if needed */
+    color: inherit; /* Use the text color defined by classes (e.g., green for correct, red for incorrect) */
+    text-align: left; /* Align text to the left */
+}
+
+.correct {
+    border: 2px solid green;
+}
+
+.incorrect {
+    border: 2px solid red;
 }
